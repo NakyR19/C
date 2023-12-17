@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
+// Funcao que eleva ao cubo
 int elevarCubo(int n){
     int resultado;
     resultado = n * n * n;

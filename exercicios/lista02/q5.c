@@ -3,12 +3,14 @@
 
 #define PI 3.1415
 
+// Funcao que calcula o quadrado de um numero qualquer
 double elevarQuadrado(double n){
     double resultado;
     resultado = n * n;
     return resultado;
 }
 
+// Função que calcula a area do circulo
 double areaCirculo(double raio){
     double raioQuadrado = elevarQuadrado(raio);
     double area = PI * raioQuadrado;
