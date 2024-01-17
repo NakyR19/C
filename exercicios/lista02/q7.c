@@ -2,7 +2,7 @@
 #include <math.h>
 
 // Função que calcula montante e rendimento.
-void faturamento(double valorInicial, double valorMensal, int tempo, double *montante, double *rendimento)
+void faturamento(float valorInicial, float valorMensal, int tempo, float *montante, float *rendimento)
 {
     *montante = valorInicial + valorMensal * tempo;
     *rendimento = *montante - valorInicial;
@@ -10,13 +10,13 @@ void faturamento(double valorInicial, double valorMensal, int tempo, double *mon
 int main()
 {
     int tempo;
-    double investInicial, investMensal, rendimento, montante;
+    float investInicial, investMensal, rendimento, montante;
     printf("Digite o valor inicial investido:\n");
-    scanf("%lf", &investInicial);
+    scanf("%f", &investInicial);
     printf("Digite o valor investido mensalmente\n");
-    scanf("%lf", &investMensal);
+    scanf("%f", &investMensal);
     printf("Digite o tempo de investimento (em meses)\n");
     scanf("%d", &tempo);
     faturamento(investInicial, investMensal, tempo, &montante, &rendimento);
-    printf("Seu montante foi de: %.2lf, e seu rendimento de %.2lf", montante, rendimento);
+    printf("Seu montante foi de: %.2f, e seu rendimento de %.2f", montante, rendimento);
 }

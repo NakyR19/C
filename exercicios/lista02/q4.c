@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 // Funcao que converte celsius para kelvin
-double conversorKelvin (int temperatura){
-    double kelvin = temperatura + 273.15;
+float conversorKelvin (int temperatura){
+    float kelvin = temperatura + 273.15;
     return kelvin;
 }
 
 // Funcao que converte celsius para Fahrenheit
-double conversonFahrenheit (int temperatura){
-    double fahrenheit = (temperatura * 9/5)+32;
+float conversonFahrenheit (int temperatura){
+    float fahrenheit = (temperatura * 9/5)+32;
     return fahrenheit;
 }
 int main (){
