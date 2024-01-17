@@ -6,6 +6,7 @@ double conversorKelvin (int temperatura){
     return kelvin;
 }
 
+// Funcao que converte celsius para Fahrenheit
 double conversonFahrenheit (int temperatura){
     double fahrenheit = (temperatura * 9/5)+32;
     return fahrenheit;
