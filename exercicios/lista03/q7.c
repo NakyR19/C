@@ -4,25 +4,25 @@
 int main(){
 
     int operador;
-    double lado;
+    float lado;
     printf("Digite o numero para o que deseja calcular\n 1 - Area\n 2 - perimetro\n 3- diagonal\n");
     scanf("%d", &operador);
     printf("Diga o valor do lado do quadrado!");
-    scanf("%lf", &lado);
+    scanf("%f", &lado);
 
     switch (operador)
     {
     case 1: 
-        double a = lado * lado;
-        printf("O Valor da area eh %.2lf", a);
+        float a = lado * lado;
+        printf("O Valor da area eh %.2f", a);
         break;
     case 2: 
-        double p = 4*lado;
-        printf("O perimetro eh: %.2lf", p);
+        float p = 4*lado;
+        printf("O perimetro eh: %.2f", p);
         break;
     case 3: 
-        double d = lado*sqrt(2);
-        printf("A diagonal do quadrado eh: %.2lf", d);
+        float d = lado*sqrt(2);
+        printf("A diagonal do quadrado eh: %.2f", d);
         break;
     default:
         printf("Selecione uma opcao valida");

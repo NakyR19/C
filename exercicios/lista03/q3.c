@@ -2,14 +2,14 @@
 
 int main()
 {
-    double notaUm, notaDois, notaTres, media;
+    float notaUm, notaDois, notaTres, media;
 
     printf("Digite sua primeira nota:\n");
-    scanf("%lf", &notaUm);
+    scanf("%f", &notaUm);
     printf("Digite sua segunda nota:\n");
-    scanf("%lf", &notaDois);
+    scanf("%f", &notaDois);
     printf("Digite sua terceira nota:\n");
-    scanf("%lf", &notaTres);
+    scanf("%f", &notaTres);
 
     // Tratamento de erro para caso notas não estejam no formato adequado, e depois a logica
     if (notaUm > 0 && notaDois > 0 && notaTres > 0 && notaUm <= 10 && notaDois <= 10 && notaTres <= 10)
@@ -17,15 +17,15 @@ int main()
         media = (notaUm + (notaDois * 2) + (notaTres * 3)) / 6;
         if (media >= 7)
         {
-            return printf("Aprovado com media %.2lf", media);
+            return printf("Aprovado com media %.2f", media);
         }
         else if (media >= 5)
         {
-            return printf("Em recuperacao com media %.2lf", media);
+            return printf("Em recuperacao com media %.2f", media);
         }
         else
         {
-            return printf("Reprovado com media %.2lf", media);
+            return printf("Reprovado com media %.2f", media);
         }
     }
     else

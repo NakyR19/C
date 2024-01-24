@@ -2,12 +2,12 @@
 
 int main()
 {
-    double peso, altura;
+    float peso, altura;
     printf("Digite seu peso em kgs:\n");
-    scanf("%lf", &peso);
+    scanf("%f", &peso);
     printf("Digite sua altura em metros\n");
-    scanf("%lf", &altura);
-    double imc = peso / (altura * altura);
+    scanf("%f", &altura);
+    float imc = peso / (altura * altura);
 
     if (imc > 0)
     {

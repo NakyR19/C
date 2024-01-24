@@ -4,14 +4,14 @@
 int main()
 {
     int dia = 0;
-    double pAtual, pIdeal, pMensal;
+    float pAtual, pIdeal, pMensal;
     printf("Digite seu peso atual:\n");
-    scanf("%lf", &pAtual);
+    scanf("%f", &pAtual);
     printf("Digite seu peso ideal:\n");
-    scanf("%lf", &pIdeal);
+    scanf("%f", &pIdeal);
     printf("Digite sua perda mensal:\n");
-    scanf("%lf", &pMensal);
-    double aproxPerdaDiaria = pMensal / 30;
+    scanf("%f", &pMensal);
+    float aproxPerdaDiaria = pMensal / 30;
     for (; pAtual > pIdeal; dia++)
     {
         pAtual = pAtual - aproxPerdaDiaria;
