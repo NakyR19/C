@@ -15,7 +15,7 @@ int inverso(int num)
 int main()
 {
     int num;
-    printf("Digite um numero inteiro positivo entre 100 e 999");
+    printf("Digite um numero inteiro positivo entre 100 e 999\n");
     scanf("%d", &num);
     int invertido = inverso(num);
     if (num >= 100 && num <= 999)

@@ -1,3 +1,5 @@
+// Calcula a media de diversos alunos
+
 #include <stdio.h>
 
 float calc_media(float a, float b, float c)

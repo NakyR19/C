@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
+// ao informar um numero devolve-se o caracter especifico seguindo o pedido de categoria
 int unidade(int num)
 {
     return num % 10;

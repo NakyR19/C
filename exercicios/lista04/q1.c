@@ -1,4 +1,4 @@
-// JK evitar "estouro" de cartão de crédito
+// Validador de compras caso o gasto esteja dentro do limite disponivel
 #include <stdio.h>
 void ValidaCompra(int i, float *L)
 {

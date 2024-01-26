@@ -1,9 +1,6 @@
-// JK faz vaquinha para proteção animal
-/*  Ajustar o código dado de forma que seja identificado também quando a
-meta da vaquinha foi ultrapassada, passando a haver duas
-mensagens de retorno ao usuário, e para, sempre que houver uma
-doação, exibir o valor parcial alcançado.
-#include <stdio.h> */
+// Calcuma a soma de uma vaquinha ate atingir a meta
+
+#include <stdio.h>
 
 int main()
 {

@@ -1,10 +1,4 @@
-/* Escrever programa , sem aplicar resto de divisão (%)
-e valor do quociente (/), para calcular a quantidade
-de meses contidos numa dada quantidade de dias.
-Considerar que todos os meses são compostos por 30 dias
-e desprezar o montante de dias que não formam pelo menos
-um mês completo (resto).
-*/
+// Conta a quantidade de meses completos a partir de um valor dado em dias
 
 #include <stdio.h>
 
