@@ -1,3 +1,4 @@
+// Conta quantas pessoas atingiram um critério específico de notas em Português, Matemática e Redação. Ele repete até o usuário quiser parar.
 
 #include <stdio.h>
 #include <ctype.h>

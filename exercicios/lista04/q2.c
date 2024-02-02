@@ -2,6 +2,8 @@
 
 #include <stdio.h>
 
+//  A função recebe a meta de arrecadação e, em seguida, solicita o valor da doação. *Se* a soma das doações for menor que a meta, o programa continua solicitando doações. Quando a meta é atingida, o programa exibe uma mensagem de sucesso e, se a soma ultrapassar a meta, exibe a diferença entre a meta e a soma
+
 int main()
 {
     float Meta, Doacao, Soma = 0;

@@ -1,4 +1,4 @@
-// Conta a quantidade de meses completos a partir de um valor dado em dias
+// Conta a quantidade de meses completos a partir de um valor dado em dias. Solicita-se a quantidade de dias e, em seguida, calcula quantos meses completos podem ser formados. Se a quantidade de dias fornecidos não for suficiente para formar um mês completo, o programa exibe uma mensagem de erro.
 
 #include <stdio.h>
 

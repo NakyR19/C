@@ -1,4 +1,4 @@
-// Serve para determinar o ph de uma substancia a partir do seu valor
+// O codigo utiliza a função determinarPh para verificar se o número inserido pelo usuário está entre 0 e 14, e imprime se a solução é ácida, neutra ou básica, utilizando o while para permitir que o usuário insira vários números.
 
 #include <stdio.h>
 
