@@ -1,6 +1,7 @@
+// A função recebe o limite do cartão e solicita o valor da compra, caso o valor da compra for menor ou igual ao limite, a compra é aprovada e o limite restante é exibido; caso contrário, a compra é rejeitada e uma msg de erro é exibida
+
 #include <stdio.h>
-// Validador de compras caso o gasto esteja dentro do limite disponivel
-// A função recebe o limite do cartão e, em seguida, solicita o valor da compra, caso o valor da compra for menor ou igual ao limite, a compra é aprovada e o limite restante é exibido; caso contrário, a compra é rejeitada e uma msg de erro é exibida
+
 void ValidaCompra(int i, float *L)
 {
     float D;

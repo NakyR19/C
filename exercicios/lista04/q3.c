@@ -1,4 +1,4 @@
-// O código é um calculador de média de alunos em C. Ele solicita as notas de três avaliações e, em seguida, calcula a média aritmética. Se a média for maior ou igual a 7, o aluno é aprovado. Se a média for maior ou igual a 3, o aluno pode fazer uma avaliação repositiva. Caso contrário, o aluno é reprovado.
+// O código solicita as notas de três avaliações e calcula a média aritmética. Se a média for maior ou igual a 7, o aluno é aprovado. Senão se a média for maior ou igual a 3, o aluno pode fazer a repositiva. Senão o aluno é reprovado.
 
 #include <stdio.h>
 

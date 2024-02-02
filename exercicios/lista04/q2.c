@@ -1,8 +1,7 @@
-// Calcuma a soma de uma vaquinha ate atingir a meta
+//  A função recebe a meta de arrecadação e solicita o valor da doação. Se a soma das doações for menor que a meta, o programa continua solicitando doações. Entretanto, quando a meta é atingida, o programa exibe uma mensagem de sucesso e, se a soma ultrapassar a meta, exibe a diferença entre a meta e a soma
 
 #include <stdio.h>
 
-//  A função recebe a meta de arrecadação e, em seguida, solicita o valor da doação. *Se* a soma das doações for menor que a meta, o programa continua solicitando doações. Quando a meta é atingida, o programa exibe uma mensagem de sucesso e, se a soma ultrapassar a meta, exibe a diferença entre a meta e a soma
 
 int main()
 {
