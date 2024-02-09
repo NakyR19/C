@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-void ValidaCompra(int i, float *L)
+void ValidarCompra(int i, float *L)
 {
     float D;
     printf("Debito: ");
@@ -24,7 +24,7 @@ int main()
     printf("Limite do cartao: ");
     scanf("%f", &Limite);
     while (Limite > 0) {
-        ValidaCompra(count, &Limite);
+        ValidarCompra(count, &Limite);
         count++;
     }
     printf("Seu limite de compras acabou!");

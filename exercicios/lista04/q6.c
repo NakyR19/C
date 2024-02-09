@@ -21,7 +21,7 @@ int calcularNotas(int acertosPort, int acertosMat, float notaRed)
         printf ("Informe suas notas na seguinte ordem: Portugues, Matematica e por fim Redacao. \n");
         scanf(" %d", &acertosPort);
         if (acertosPort < 0) {
-            return 0;
+            break;
         }
         scanf(" %d", &acertosMat);
         scanf(" %f", &notaRed);
