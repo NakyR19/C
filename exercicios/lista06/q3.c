@@ -23,4 +23,5 @@ int main()
         }
     }
     printf("Na palavra: %s\nExiste(m) %d vogal(is)", palavra, count);
+    return 0;
 }

@@ -24,4 +24,6 @@ int main()
         nome[i] = tolower(nome[i]);
     }
     printf("%s\n", nome);
+    return 0;
+
 }
