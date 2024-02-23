@@ -40,41 +40,23 @@ char *stringToUpper(char *palavra)
     return palavra;
 }
 
-void lerNome(char *nome)
+int main()
 {
-    printf("Digite seu nome:\n");
-    fgets(nome, 21, stdin);
-    nome[strcspn(nome, "\n")] = 0;
-}
-
-int continuar()
-{
-    char condParada;
-    printf("Deseja continuar? S - Sim, N - Nao\n");
-    scanf(" %c", &condParada);
-    getchar();
-    condParada = toupper(condParada);
-    if (condParada == 'S')
-        return 1;
-    else
-        return 0;
-}
-
-void realizarImpressoes()
-{
-    char nome[21], sobrenome[21], primeiroNome[21];
+    char nome[21], sobrenome[21], primeiroNome[21], condParada;
 
     do
     {
-        lerNome(nome);
+        printf("Digite seu nome:\n");
+        fgets(nome, 21, stdin);
+        nome[strcspn(nome, "\n")] = 0;
         pegarSobrenome(nome, sobrenome);
         pegarPrimeiroNome(nome, primeiroNome);
         strcpy(sobrenome, stringToUpper(sobrenome));
         printf("%s, %s\n", sobrenome, primeiroNome);
-    } while (continuar());
-}
-int main()
-{
-    realizarImpressoes();
+        printf("Deseja continuar? S - Sim, N - Nao\n");
+        scanf(" %c", &condParada);
+        getchar();
+        condParada = toupper(condParada);
+    } while (condParada == 'S');
     return 0;
 }

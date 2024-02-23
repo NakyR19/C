@@ -14,35 +14,65 @@
 #include <ctype.h>
 #include <stdlib.h>
 
+// Copia uma string contida em outra delimitada pelo seu index
 char *charPerIndex(char *palavra, int idxInicial, int idxFinal)
 {
-    char palavraComprimida[20]; // três caracteres mais o terminador de linha
-    // copia os três primeiros caracteres de um array para o outro
-    memcpy(palavraComprimida, &palavra[idxInicial], idxFinal);
-    palavraComprimida[idxFinal] = '\0'; // adiciona o terminador de linha
-    strcpy(palavra, palavraComprimida);
-    return palavra;
-}
-
-void lerMatricula(char *matricula)
-{
-    printf("Digite sua matricula:\n");
-    fgets(matricula, 21, stdin);
-    matricula[strcspn(matricula, "\n")] = 0;
+    char *palavraComprimida = malloc(20); // aloca espaço na memoria
+    memcpy(palavraComprimida, &palavra[idxInicial], idxFinal - idxInicial + 1);
+    palavraComprimida[idxFinal - idxInicial + 1] = '\0';
+    return palavraComprimida;
 }
 
 int main()
 {
 
-    char matricula[20], ano[5], curso[3];
-    lerMatricula(matricula);
+    char matricula[20], *ano, *curso, *nomecurso;
+    int codAno = 0, codCurso = 0, anoDado = 0, cursoDado = 0, countAno = 0, countCurso = 0;
+    printf("Digite o ano ao qual voce quer checar:\n");
+    scanf("%d", &codAno);
+    printf("Digite o codigo do curso ao qual voce quer checar:\n");
+    scanf("%d", &codCurso);
+    getchar(); // limpar \n
 
-    strcpy(ano, charPerIndex(matricula, 0, 3));
-    strcpy(curso, charPerIndex(matricula, 4, 5));
+    for (int i = 0; i < 4; i++)
+    {
 
-    for(int i = 0; i < 100; i++) {
-        
+        printf("Digite a matricula do aluno:\n");
+        fgets(matricula, 21, stdin);
+        matricula[strcspn(matricula, "\n")] = 0;
+        ano = charPerIndex(matricula, 0, 3);
+        curso = charPerIndex(matricula, 4, 5);
+        anoDado = atoi(ano);
+        cursoDado = atoi(curso);
+
+        // Nao criei erro de saída para curso dado pois nada impede de haver outros cursos na instituição, limitei ano (internet rs)
+        if (anoDado >= 2000 || anoDado <= 2024)
+        {
+            if (anoDado == codAno)
+            {
+                countAno++;
+            }
+            if (cursoDado == codCurso)
+            {
+                countCurso++;
+            }
+        }
+        else
+        {
+            printf("Informe uma matricula valida dentro dos parametros por favor!\n");
+        }
+
+        free(ano);
+        free(curso);
+    }
+    if (codCurso == 99)
+    {
+        nomecurso = "gerontologia";
+    }
+    else
+    {
+        nomecurso = "agroecologia";
     }
 
-    printf("%s", matricula);
+    printf("Dentre os alunos informados, %d entraram no ano pedido (%d), e %d entraram no curso pedido (%s)", countAno, codAno, countCurso, nomecurso);
 }

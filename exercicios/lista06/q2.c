@@ -13,17 +13,23 @@
 #include <stdio.h>
 #include <ctype.h>
 
+// transforma a letra no index 0 em maiuscula e o resto em minuscula!
+void corrigirNome(char *nome)
+{
+    nome[0] = toupper(nome[0]);
+
+    for (int i = 1; nome[i] != '\0'; i++)
+    {
+        nome[i] = tolower(nome[i]);
+    }
+}
+
 int main()
 {
     char nome[21];
     printf("Digite seu nome: (Limite de 20 caracteres) \n");
     scanf("%s", nome);
-    nome[0] = toupper(nome[0]);
-    for (int i = 1; nome[i] != '\0'; i++)
-    {
-        nome[i] = tolower(nome[i]);
-    }
+    corrigirNome(nome);
     printf("%s\n", nome);
     return 0;
-
 }

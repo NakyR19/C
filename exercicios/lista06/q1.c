@@ -12,13 +12,16 @@
 #include <ctype.h>
 
 // O código realiza a alteração da letra de minusculo para maiusculo para cada letra utilizando como base seu índice
+void stringToUpper (char* palavra) {
+    for (int i = 0; palavra[i] != '\0'; i++){
+        palavra[i] = toupper(palavra[i]);
+    }
+}
 int main(){
     char palavra[21];
     printf("Digite uma palavra com ate 20 caracteres: \n");
     scanf("%s", palavra);
-    for (int i = 0; palavra[i] != '\0'; i++){
-        palavra[i] = toupper(palavra[i]);
-    }
+    stringToUpper(palavra);
     printf("%s\n", palavra);
     return 0;
 }
