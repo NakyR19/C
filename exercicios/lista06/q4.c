@@ -10,13 +10,13 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-// A função pega a partir do primeiro caracter após o espaço em branco
+// A função serve para capturar o sobrenome de um nome dado
 void pegarSobrenome(char *nome, char *sobrenome)
 {
-    char *aux = strchr(nome, ' ');
+    char *aux = strchr(nome, ' '); // procura o espaço em branco em nome, e assimila a aux apenas após este espaço
     if (aux)
     {
-        aux++; // "Percorre" o Array pós espaço (apenas começa após o espaço em branco)
+        aux++; // "Percorre" o Array (apenas começa após o espaço em branco)
         strcpy(sobrenome, aux);
     }
 }
@@ -24,10 +24,21 @@ void pegarSobrenome(char *nome, char *sobrenome)
 // Extrai e armazena o primeiro nome de uma string
 void pegarPrimeiroNome(char *nome, char *primeiroNome)
 {
-    char *ptr = strchr(nome, ' ');
-    int length = ptr - nome;
+    char *aux = strchr(nome, ' '); 
+    int length = aux - nome; // Após encontrar o espaço, ela calcula o comprimento do nome que vem antes desse espaço.
     strncpy(primeiroNome, nome, length);
     primeiroNome[length] = '\0';
+}
+
+// Transforma a primeira letra em maiuscula e o resto em minuscula
+void corrigirNome(char *nome)
+{
+    nome[0] = toupper(nome[0]);
+
+    for (int i = 1; nome[i] != '\0'; i++)
+    {
+        nome[i] = tolower(nome[i]);
+    }
 }
 
 // Recebe uma string e percorre transformando seus caracteres em maiúsculo (Devolve uma String)
@@ -51,6 +62,7 @@ int main()
         nome[strcspn(nome, "\n")] = 0;
         pegarSobrenome(nome, sobrenome);
         pegarPrimeiroNome(nome, primeiroNome);
+        corrigirNome(primeiroNome);
         strcpy(sobrenome, stringToUpper(sobrenome));
         printf("%s, %s\n", sobrenome, primeiroNome);
         printf("Deseja continuar? S - Sim, N - Nao\n");

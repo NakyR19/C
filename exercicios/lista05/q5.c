@@ -11,7 +11,7 @@ int calcularFatorial(int num)
 }
 int main()
 {
-    int n = 0;
+    int n = 1;
     char continuar = 'S';
 
     if (n > 0)

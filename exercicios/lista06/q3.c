@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
+// Função serve para identificar se uma letra passada é vogal ou não (retorna 1 se sim, 0 se não)
 int identificadorDeVogais (char letra){
     int count = 0;
     if(letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
