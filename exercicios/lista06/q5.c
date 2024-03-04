@@ -19,6 +19,7 @@ char *charPerIndex(char *palavra, int idxInicial, int idxFinal)
 {
     char *palavraComprimida = malloc(20); // aloca espaço na memoria
     memcpy(palavraComprimida, &palavra[idxInicial], idxFinal - idxInicial + 1); // Copia os caracteres da string original entre dois index definidos
+    palavraComprimida[idxFinal - idxInicial + 1] = '\0'; // garante q seja uma string válida
     return palavraComprimida;
 }
 
