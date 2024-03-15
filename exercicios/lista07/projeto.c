@@ -54,6 +54,11 @@ void ClienteChega()
         printf("Qual a vaga ocupada? ");
         scanf("%d", &Vaga);
         fflush(stdin);
+         if (strcmp(Estaciona[Vaga - 1], "LIVRE") != 0) {
+            printf("\nERRO: A vaga ja ta ocupada!\n");
+            system("pause");
+            return;
+        }
         printf("Qual a placa do veiculo [7 digitos]? ");
         fgets(Placa, 8, stdin);
         Placa[strcspn(Placa, "\n")] = 0;
@@ -62,6 +67,13 @@ void ClienteChega()
         printf("Qual a hora de entrada [formato nn:nn]? ");
         fgets(Hora, 6, stdin);
         Hora[strcspn(Hora, "\n")] = 0;
+        // Verifica se a hora de entrada está dentro do horário de funcionamento
+        int HoraEntrada = atoi(Hora);
+        if (HoraEntrada < 6 || HoraEntrada > 20) {
+            printf("\nERRO: Fora do horario de funcionamento!\n");
+            system("pause");
+            return;
+        }
         strcat(Entrada, "+");
         strcat(Entrada, Hora);
         strcpy(Estaciona[Vaga - 1], Entrada);
@@ -96,7 +108,6 @@ void ClienteSai()
         fgets(Saida, 6, stdin);
         Saida[strcspn(Saida, "\n")] = 0;
         // se vaga LIVRE, houve erro
-
         strcpy(Entrada, Estaciona[Vaga - 1]);
 
         // Teste
