@@ -10,7 +10,7 @@ void exibirVetorFloat(float V[], int QuantItens)
 {
     printf("Os valores considerados sao:\n");
     for (int i = 0; i < QuantItens; i++)
-        printf("%.2f ", V[i]);
+        printf("%.2fR$ ", V[i]);
     printf("\n");
 }
 
@@ -47,6 +47,10 @@ int main()
     for (int i = 0; i < length; i++)
     {
         scanf("%f", &vendas[i]);
+        if(vendas[i] < 0){
+            printf("Por favor, informe um valor valido! Essa operação sera fechada, desconsidere as mensagens a seguir e reenicie o programa para recomeçar.\n");
+            break;
+        }
     }
     mediaVendas = calcularMedia(vendas, length);
     underMeta = abaixoMedia(vendas, length, mediaVendas);

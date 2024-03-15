@@ -27,7 +27,7 @@ void corrigirNome(char *nome)
 int main()
 {
     char nome[21];
-    printf("Digite seu nome: (Limite de 20 caracteres) \n");
+    printf("Digite apenas seu primeiro nome: (Limite de 20 caracteres) \n");
     scanf("%s", nome);
     corrigirNome(nome);
     printf("%s\n", nome);
