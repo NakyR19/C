@@ -54,7 +54,8 @@ void ClienteChega()
         printf("Qual a vaga ocupada? ");
         scanf("%d", &Vaga);
         fflush(stdin);
-        if (Vaga < 1 || Vaga > 30 || strcmp(Estaciona[Vaga - 1], "LIVRE") != 0) {
+        if (Vaga < 1 || Vaga > 30 || strcmp(Estaciona[Vaga - 1], "LIVRE") != 0)
+        {
             printf("\nERRO: A vaga ja esta ocupada ou eh invalida!\n");
             system("pause");
             return;
@@ -64,7 +65,8 @@ void ClienteChega()
         Placa[strcspn(Placa, "\n")] = 0;
         strcpy(Entrada, Placa);
         fflush(stdin);
-        if (strlen(Placa) != 7) {
+        if (strlen(Placa) != 7)
+        {
             printf("\nERRO: Formato de placa invalido!\n");
             system("pause");
             return;
@@ -74,7 +76,8 @@ void ClienteChega()
         Hora[strcspn(Hora, "\n")] = 0;
         // Verifica se a hora de entrada está dentro do horário de funcionamento
         int HoraEntrada = atoi(Hora);
-        if (strlen(Hora) != 5 || Hora[2] != ':' || atoi(Hora) < 6 || atoi(Hora) > 20) {
+        if (strlen(Hora) != 5 || Hora[2] != ':' || atoi(Hora) < 6 || atoi(Hora) > 20)
+        {
             printf("\nERRO: Formato de hora invalido ou fora do horario de funcionamento!\n");
             system("pause");
             return;
