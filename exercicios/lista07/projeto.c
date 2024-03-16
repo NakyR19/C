@@ -75,7 +75,6 @@ void ClienteChega()
         fgets(Hora, 6, stdin);
         Hora[strcspn(Hora, "\n")] = 0;
         // Verifica se a hora de entrada está dentro do horário de funcionamento
-        int HoraEntrada = atoi(Hora);
         if (strlen(Hora) != 5 || Hora[2] != ':' || atoi(Hora) < 6 || atoi(Hora) > 20)
         {
             printf("\nERRO: Formato de hora invalido ou fora do horario de funcionamento!\n");
