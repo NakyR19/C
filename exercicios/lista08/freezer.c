@@ -81,7 +81,7 @@ void SelecionaCaracteristica(float Matriz[][6], int *C)
     *C = Op - 1;
 };
 
-void AlteraDado(float Matriz[][6]){
+void AlterarDado(float Matriz[][6]){
   int freezer, caracteristica;
   float novoValor;
 
@@ -177,7 +177,7 @@ int main()
             break;
         case 4:
             printf("\n_Altera Dado_");
-            AlteraDado(M);
+            AlterarDado(M);
             system("pause");
             break;
         case 5:
